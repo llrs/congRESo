@@ -34,8 +34,8 @@ parser_files <- function(x) {
 }
 
 text_children <- function(x) {
-    names <- xml_name(xml_children(x))
-    values <- xml_text(xml_children(x))
+    names <- xml2::xml_name(xml2::xml_children(x))
+    values <- xml2::xml_text(xml2::xml_children(x), trim = TRUE)
     names(values) <- names
     values
 }
